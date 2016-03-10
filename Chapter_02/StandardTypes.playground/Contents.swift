@@ -13,3 +13,11 @@ var arrayOfInts: [Int]
 var dictionaryOfCapitalsByCountry: [String:String]
 
 var winningLotteryNumbers: Set<Int>
+
+let number = 42
+let fmStation = 91.1
+
+let countingUp = ["one", "two"]
+let nameByParkingSpace = [13: "Alice", 27: "Bob"]
+
+let secondElement = countingUp[1]
