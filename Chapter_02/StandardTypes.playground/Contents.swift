@@ -22,7 +22,11 @@ let nameByParkingSpace = [13: "Alice", 27: "Bob"]
 
 let secondElement = countingUp[1]
 
+countingUp.count
+
 let emptyString = String()
+emptyString.isEmpty
+
 let emptyArrayOfInts = [Int]()
 let emptySetOfFloats = Set<Float>()
 
