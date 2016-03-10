@@ -28,11 +28,17 @@
                                 <rect key="frame" x="251" y="86" width="98" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O8n-CS-yKO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqX-xc-2vs">
                                 <rect key="frame" x="254" y="318" width="93" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="McL-ip-kvs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5u-bF-9GE">
                                 <rect key="frame" x="288" y="284" width="25" height="20"/>
@@ -58,7 +64,6 @@
                     <connections>
                         <outlet property="answerLabel" destination="F5u-bF-9GE" id="ess-5B-3R0"/>
                         <outlet property="questionLabel" destination="f1e-dV-CSR" id="ryO-Gq-pe7"/>
-                        <outlet property="test" destination="f1e-dV-CSR" id="DBN-tD-DMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

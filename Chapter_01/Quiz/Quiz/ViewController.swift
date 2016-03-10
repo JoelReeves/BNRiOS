@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
+    @IBAction func showNextQuestion(sender: UIButton) {
         
+    }
+        
+    @IBAction func showAnswer(sender: UIButton) {
+        
+    }
 }
 
