@@ -24,11 +24,20 @@ if let space13Assignee = nameByParkingSpace[13] {
     print("Key 13 is assigned in the dictionary")
 }
 
+for (space, name) in nameByParkingSpace {
+    let permit = "Space \(space): \(name)"
+    print(permit)
+}
+
 let secondElement = countingUp[1]
 
 countingUp.count
 
 countingUp.append("three")
+
+for string in countingUp {
+    print(string)
+}
 
 let emptyString = String()
 emptyString.isEmpty
