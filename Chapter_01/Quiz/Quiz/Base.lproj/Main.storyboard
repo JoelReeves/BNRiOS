@@ -55,6 +55,11 @@
                             <constraint firstItem="F5u-bF-9GE" firstAttribute="centerX" secondItem="Kq9-CQ-CVw" secondAttribute="centerX" id="yuA-0E-f6E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="F5u-bF-9GE" id="ess-5B-3R0"/>
+                        <outlet property="questionLabel" destination="f1e-dV-CSR" id="ryO-Gq-pe7"/>
+                        <outlet property="test" destination="f1e-dV-CSR" id="DBN-tD-DMM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
