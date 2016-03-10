@@ -19,6 +19,10 @@ let fmStation = 91.1
 
 var countingUp = ["one", "two"]
 let nameByParkingSpace = [13: "Alice", 27: "Bob"]
+let space42Assignee: String? = nameByParkingSpace[42]  // results in nil since key isn't in dictionary
+if let space13Assignee = nameByParkingSpace[13] {
+    print("Key 13 is assigned in the dictionary")
+}
 
 let secondElement = countingUp[1]
 
