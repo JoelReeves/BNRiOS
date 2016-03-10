@@ -22,11 +22,20 @@ class ViewController: UIViewController {
     var currentQuestionIndex: Int = 0
     
     @IBAction func showNextQuestion(sender: UIButton) {
+        currentQuestionIndex += 1
         
+        if currentQuestionIndex == questions.count {
+            currentQuestionIndex = 0
+        }
+        
+        let question: String = questions[currentQuestionIndex]
+        questionLabel.text = question
+        answerLabel.text = "???"
     }
         
     @IBAction func showAnswer(sender: UIButton) {
-        
+        let answer: String = answers[currentQuestionIndex]
+        answerLabel.text = answer
     }
 }
 
