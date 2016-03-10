@@ -75,8 +75,8 @@ if let r1 = reading1, r2 = reading2, r3 = reading3 {
 }
 
 
-enum PieType {
-    case Apple
+enum PieType: Int {
+    case Apple = 0
     case Cherry
     case Pecan
 }
@@ -92,4 +92,10 @@ case .Cherry:
     name = "Cherry"
 case .Pecan:
     name = "Pecan"
+}
+
+let pieRawValue = PieType.Pecan.rawValue
+
+if let pieType = PieType(rawValue: pieRawValue) {
+    print("got a valid pietype!")
 }
