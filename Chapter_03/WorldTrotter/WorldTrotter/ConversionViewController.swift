@@ -13,6 +13,16 @@ class ConversionViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var celsiusLabel: UILabel!
     
+    var fahrenheitValue: Double?
+    
+    var celsiusValue: Double? {
+        if let value = fahrenheitValue {
+            return (value - 32) * (5/9)
+        } else {
+            return nil
+        }
+    }
+    
     @IBAction func fahrenheitFieldEditingChanged(sender: UITextField) {
         if let text = sender.text where !text.isEmpty {
             celsiusLabel.text = text
