@@ -13,6 +13,14 @@ class ConversionViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var celsiusLabel: UILabel!
     
+    let numberFormatter: NSNumberFormatter = {
+        let nf = NSNumberFormatter()
+        nf.numberStyle = .DecimalStyle
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
+    
     var fahrenheitValue: Double? {
         didSet {
             updateCelsiusLabel()
