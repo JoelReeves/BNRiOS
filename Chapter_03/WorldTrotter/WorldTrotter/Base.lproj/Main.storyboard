@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <outletCollection property="gestureRecognizers" destination="qtX-0S-Dvg" appends="YES" id="Fv3-Wl-Gwb"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qfy-XS-TSe"/>
+                    <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="qfy-XS-TSe"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="SUE-db-FJv" id="iCo-B2-RYs"/>
                         <outlet property="textField" destination="z9A-f7-gY2" id="UzM-Az-39I"/>
@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="1026" y="574"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="XPI-n2-2Hf">
             <objects>
                 <viewController id="rxJ-0I-dxq" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Item" id="pkk-zf-PFb"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="pkk-zf-PFb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enp-Kv-ULs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,4 +129,8 @@
             <point key="canvasLocation" x="298" y="754"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ConvertIcon" width="49" height="33"/>
+        <image name="MapIcon" width="49" height="33"/>
+    </resources>
 </document>
