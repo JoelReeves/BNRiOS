@@ -41,6 +41,25 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         print("ConversionViewController loaded it's view")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        switch getCurrentHour() {
+        case 17..<23:
+            self.view.backgroundColor = UIColor.darkGrayColor()
+        default:
+            self.view.backgroundColor = UIColor.lightGrayColor()
+        }
+    }
+    
+    func getCurrentHour() -> Int {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let hour = calendar.component(.Hour, fromDate: date)
+        print("Current hour: \(hour)")
+        return hour
+    }
+    
     func updateCelsiusLabel() {
         if let value = celsiusValue {
             celsiusLabel.text = numberFormatter.stringFromNumber(value)
