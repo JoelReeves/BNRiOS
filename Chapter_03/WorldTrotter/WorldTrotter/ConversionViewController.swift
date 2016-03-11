@@ -37,7 +37,7 @@ class ConversionViewController: UIViewController {
     
     func updateCelsiusLabel() {
         if let value = celsiusValue {
-            celsiusLabel.text = "\(value)"
+            celsiusLabel.text = numberFormatter.stringFromNumber(value)
         } else {
             celsiusLabel.text = "???"
         }
