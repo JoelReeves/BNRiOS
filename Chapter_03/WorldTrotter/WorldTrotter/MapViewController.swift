@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
     
@@ -38,6 +39,14 @@ class MapViewController: UIViewController {
         topConstraint.active = true
         leadingConstraint.active = true
         trailingConstraint.active = true
+        
+        let button   = UIButton(type: UIButtonType.System) as UIButton
+        button.frame = CGRectMake(150, 100, 100, 50)
+        button.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
+        button.setTitle("Test Button", forState: UIControlState.Normal)
+        button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(button)
     }
     
     override func viewDidLoad() {
@@ -57,5 +66,9 @@ class MapViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func buttonAction(sender:UIButton!){
+        print("Button tapped")
     }
 }

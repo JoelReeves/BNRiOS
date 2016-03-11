@@ -12,6 +12,7 @@
 		AB34C4A01C93566F00635731 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34C49F1C93566F00635731 /* MapViewController.swift */; };
 		AB34C4A21C936AAF00635731 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34C4A11C936AAF00635731 /* WebViewController.swift */; };
 		AB34C4A41C936CBF00635731 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB34C4A31C936CBF00635731 /* WebKit.framework */; };
+		AB34C4A61C93731400635731 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB34C4A51C93731400635731 /* CoreLocation.framework */; };
 		AB3E40BE1C921888001535F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E40BD1C921888001535F8 /* AppDelegate.swift */; };
 		AB3E40C31C921888001535F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3E40C11C921888001535F8 /* Main.storyboard */; };
 		AB3E40C51C921888001535F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3E40C41C921888001535F8 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		AB34C49F1C93566F00635731 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AB34C4A11C936AAF00635731 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AB34C4A31C936CBF00635731 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AB34C4A51C93731400635731 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AB3E40BA1C921888001535F8 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3E40BD1C921888001535F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB3E40C21C921888001535F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB34C4A61C93731400635731 /* CoreLocation.framework in Frameworks */,
 				AB34C4A41C936CBF00635731 /* WebKit.framework in Frameworks */,
 				AB34C49E1C9350DE00635731 /* MapKit.framework in Frameworks */,
 			);
@@ -48,6 +51,7 @@
 		AB3E40B11C921888001535F8 = {
 			isa = PBXGroup;
 			children = (
+				AB34C4A51C93731400635731 /* CoreLocation.framework */,
 				AB34C4A31C936CBF00635731 /* WebKit.framework */,
 				AB34C49C1C934F3D00635731 /* MapKit.framework */,
 				AB3E40BC1C921888001535F8 /* WorldTrotter */,
