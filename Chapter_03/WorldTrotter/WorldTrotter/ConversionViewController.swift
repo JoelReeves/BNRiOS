@@ -44,11 +44,10 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        switch getCurrentHour() {
-        case 17..<23:
-            self.view.backgroundColor = UIColor.darkGrayColor()
-        default:
-            self.view.backgroundColor = UIColor.lightGrayColor()
+        if getCurrentHour() >= 17 || getCurrentHour() <= 5 {
+            view.backgroundColor = UIColor.darkGrayColor()
+        } else {
+            view.backgroundColor = UIColor.lightGrayColor()
         }
     }
     
