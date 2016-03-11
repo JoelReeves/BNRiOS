@@ -115,6 +115,9 @@
                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                     </webView>
                     <tabBarItem key="tabBarItem" title="Web" id="qlx-bf-JbC"/>
+                    <connections>
+                        <outlet property="webView" destination="8C8-9R-FnC" id="9EC-ou-BPG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2v3-Mv-DvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
