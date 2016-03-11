@@ -43,6 +43,13 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        print("Current text: \(textField.text)")
+        print("Replacment text: \(string)")
+        
+        return true
+    }
+    
     @IBAction func fahrenheitFieldEditingChanged(sender: UITextField) {
         if let text = sender.text, value = Double(text) {
             fahrenheitValue = value
