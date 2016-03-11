@@ -13,7 +13,11 @@ class ConversionViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var celsiusLabel: UILabel!
     
-    var fahrenheitValue: Double?
+    var fahrenheitValue: Double? {
+        didSet {
+            updateCelsiusLabel()
+        }
+    }
     
     var celsiusValue: Double? {
         if let value = fahrenheitValue {
