@@ -41,9 +41,9 @@ class MapViewController: UIViewController {
         trailingConstraint.active = true
         
         let button   = UIButton(type: UIButtonType.System) as UIButton
-        button.frame = CGRectMake(150, 100, 100, 50)
+        button.frame = CGRectMake(135, 75, 100, 50)
         button.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
-        button.setTitle("Test Button", forState: UIControlState.Normal)
+        button.setTitle("My Location", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(button)
