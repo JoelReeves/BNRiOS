@@ -92,7 +92,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1211" y="1167"/>
+            <point key="canvasLocation" x="1026" y="574"/>
         </scene>
         <!--Item-->
         <scene sceneID="XPI-n2-2Hf">
@@ -107,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enp-Kv-ULs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211" y="477"/>
+            <point key="canvasLocation" x="1026" y="1282"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3ji-Jp-nSg">
