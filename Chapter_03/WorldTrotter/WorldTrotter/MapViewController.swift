@@ -40,13 +40,12 @@ class MapViewController: UIViewController {
         leadingConstraint.active = true
         trailingConstraint.active = true
         
-        let button   = UIButton(type: UIButtonType.System) as UIButton
-        button.frame = CGRectMake(135, 75, 100, 50)
-        button.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
-        button.setTitle("My Location", forState: UIControlState.Normal)
-        button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        self.view.addSubview(button)
+        let locationButton = UIButton(type: .System)
+        locationButton.frame = CGRectMake(135, 75, 100, 50)
+        locationButton.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
+        locationButton.setTitle("My Location", forState: .Normal)
+        locationButton.addTarget(self, action: "buttonAction:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(locationButton)
     }
     
     override func viewDidLoad() {
