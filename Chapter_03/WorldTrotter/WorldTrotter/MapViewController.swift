@@ -10,9 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     var mapView: MKMapView!
+    var locationManager: CLLocationManager!
     
     override func loadView() {
         // create a map view
@@ -67,7 +68,28 @@ class MapViewController: UIViewController {
         }
     }
     
-    func buttonAction(sender:UIButton!){
-        print("Button tapped")
+    func buttonAction(sender: UIButton!){
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let latestLocation = locations.last {
+            print("latest location: \(latestLocation.coordinate.latitude), \(latestLocation.coordinate.longitude)")
+            
+            locationManager.stopUpdatingLocation()
+            
+            // call the mapkit's methods to center your map
+            let zoomedInCurrentLocation = MKCoordinateRegionMakeWithDistance(latestLocation.coordinate, 500, 500)
+            mapView.setRegion(zoomedInCurrentLocation, animated: true)
+            mapView.showsUserLocation = true
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error obtaining location: \(error.localizedDescription)")
     }
 }
