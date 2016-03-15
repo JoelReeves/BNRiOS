@@ -26,6 +26,8 @@
 		AB3E40C41C921888001535F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3E40C71C921888001535F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB3E40C91C921888001535F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB54E95A1C988D1100EF89C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		AB54E95D1C9899D500EF89C3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AB3E40C21C921888001535F8 /* Base */,
+				AB54E95A1C988D1100EF89C3 /* en */,
+				AB54E95D1C9899D500EF89C3 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
