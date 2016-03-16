@@ -80,6 +80,9 @@ class ViewController: UIViewController {
             },
             completion: { _ in
                 swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
+                swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
+                
+                self.updateOffscreenLabel()
                 
             })
     }
