@@ -12,6 +12,7 @@
 		AB6919E51C999405002DF934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6919E41C999405002DF934 /* Assets.xcassets */; };
 		AB6919E81C999405002DF934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6919E61C999405002DF934 /* LaunchScreen.storyboard */; };
 		AB6919F01C99956C002DF934 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6919EF1C99956C002DF934 /* ItemsViewController.swift */; };
+		AB6919F81C999772002DF934 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6919F71C999772002DF934 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AB6919E71C999405002DF934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6919E91C999405002DF934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB6919EF1C99956C002DF934 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
+		AB6919F71C999772002DF934 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6919EF1C99956C002DF934 /* ItemsViewController.swift */,
+				AB6919F71C999772002DF934 /* Item.swift */,
 				AB6919DD1C999405002DF934 /* AppDelegate.swift */,
 				AB6919E11C999405002DF934 /* Main.storyboard */,
 				AB6919E41C999405002DF934 /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB6919F01C99956C002DF934 /* ItemsViewController.swift in Sources */,
+				AB6919F81C999772002DF934 /* Item.swift in Sources */,
 				AB6919DE1C999405002DF934 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
