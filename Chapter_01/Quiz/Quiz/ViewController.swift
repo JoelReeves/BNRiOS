@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         currentQuestionLabel.text = questions[currentQuestionIndex]
+        
+        updateOffscreenLabel()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -35,6 +37,11 @@ class ViewController: UIViewController {
         
         // set the label's initial alpha
         nextQuestionLabel.alpha = 0
+    }
+    
+    func updateOffscreenLabel() {
+        let screenWidth = view.frame.width
+        nextQuestionLabelCenterXConstraint.constant = -screenWidth
     }
     
     @IBAction func showNextQuestion(sender: UIButton) {
