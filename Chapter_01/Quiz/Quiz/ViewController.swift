@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var currentQuestionLabel: UILabel!
+    @IBOutlet weak var currentQuestionLabelCenterXConstraint: NSLayoutConstraint!
     @IBOutlet weak var nextQuestionLabel: UILabel!
+    @IBOutlet weak var nextQuestionLabelCenterXConstraint: NSLayoutConstraint!
     @IBOutlet weak var answerLabel: UILabel!
     
     let questions: [String] = ["From what is cognac made?",

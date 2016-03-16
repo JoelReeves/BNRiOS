@@ -54,8 +54,8 @@
                         <constraints>
                             <constraint firstItem="f1e-dV-CSR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="3Dv-me-hrX"/>
                             <constraint firstItem="F5u-bF-9GE" firstAttribute="top" secondItem="Kq9-CQ-CVw" secondAttribute="bottom" constant="168" id="I2m-MP-1T0"/>
-                            <constraint firstItem="f1e-dV-CSR" firstAttribute="centerX" secondItem="Kq9-CQ-CVw" secondAttribute="centerX" id="NHT-pE-qBc"/>
                             <constraint firstItem="KqX-xc-2vs" firstAttribute="centerX" secondItem="Kq9-CQ-CVw" secondAttribute="centerX" id="Ron-7V-szl"/>
+                            <constraint firstItem="Kq9-CQ-CVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TLY-pL-6Oh"/>
                             <constraint firstItem="KqX-xc-2vs" firstAttribute="top" secondItem="F5u-bF-9GE" secondAttribute="bottom" constant="14" id="f8a-Oo-gRi"/>
                             <constraint firstItem="Kq9-CQ-CVw" firstAttribute="top" secondItem="f1e-dV-CSR" secondAttribute="bottom" constant="19" id="g3v-Uc-g1T"/>
                             <constraint firstItem="Jqb-WM-4FK" firstAttribute="top" secondItem="f1e-dV-CSR" secondAttribute="top" id="jo5-mO-ma4"/>
@@ -67,7 +67,9 @@
                     <connections>
                         <outlet property="answerLabel" destination="F5u-bF-9GE" id="ess-5B-3R0"/>
                         <outlet property="currentQuestionLabel" destination="f1e-dV-CSR" id="FST-CD-VlG"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="te2-yC-che" id="BNK-zU-ica"/>
                         <outlet property="nextQuestionLabel" destination="Jqb-WM-4FK" id="FMn-b1-FLX"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="l4E-J9-TF1" id="iNv-2u-eh4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
