@@ -52,6 +52,15 @@ class ItemsViewController: UITableViewController {
     }
     
     @IBAction func addNewItem(sender: UIButton) {
+        // create a new item and add it to the ItemStore
+        let newItem = itemStore.createItem()
         
+        // figure out where that item is in the array
+        if let index = itemStore.allItems.indexOf(newItem) {
+            let indexPath = NSIndexPath(forItem: index, inSection: 0)
+            
+            // insert this new row into the table
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
 }
