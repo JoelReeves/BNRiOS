@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="88" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zXy-9m-nxq" id="VQN-Wh-cvI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U8-7T-hmZ">
@@ -79,6 +79,11 @@
                                         <constraint firstItem="0U8-7T-hmZ" firstAttribute="top" secondItem="VQN-Wh-cvI" secondAttribute="topMargin" id="zXy-oL-3SC"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="0U8-7T-hmZ" id="IVx-1x-5B1"/>
+                                    <outlet property="serialNumberLabel" destination="4Sg-nr-5iR" id="Lps-10-r9d"/>
+                                    <outlet property="valueLabel" destination="hfT-Nl-Cdy" id="bHH-eQ-07L"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
