@@ -41,6 +41,17 @@ class ItemsViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // if the table view is asking to commit a delete command
+        if editingStyle == .Delete {
+            let item = itemStore.allItems[indexPath.row]
+            
+            // remove the item from the store & also remove that row from the table view with an animation
+            itemStore.removeItem(item)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
+    
     @IBAction func toggleEditingMode(sender: UIButton) {
         if editing {
             sender.setTitle("Edit", forState: .Normal)
@@ -60,7 +71,7 @@ class ItemsViewController: UITableViewController {
             let indexPath = NSIndexPath(forItem: index, inSection: 0)
             
             // insert this new row into the table
-            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
     }
 }
