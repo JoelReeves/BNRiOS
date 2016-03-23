@@ -41,6 +41,8 @@ class ItemsViewController: UITableViewController {
         // this cell will appear in on the tableview
         let item = itemStore.allItems[indexPath.row]
         
+        cell.updateLabelColors(item.valueInDollars)
+        
         // configure the cell with the Item
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber

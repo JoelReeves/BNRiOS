@@ -23,4 +23,12 @@ class ItemCell: UITableViewCell {
         serialNumberLabel.font = caption1Font
     }
     
+    func updateLabelColors(value: Int) {
+        if value < 50 {
+            valueLabel.textColor = UIColor.greenColor()
+        } else {
+            valueLabel.textColor = UIColor.redColor()
+        }
+    }
+    
 }
