@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zg7-HM-QY2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zg7-HM-QY2">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Items View Controller-->
@@ -13,9 +13,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="o2T-W6-pHp">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYj-lL-Ta9">
+                                    <rect key="frame" x="8" y="15" width="288" height="30"/>
+                                    <state key="normal" title="Edit"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWO-6C-mPB">
+                                    <rect key="frame" x="304" y="15" width="288" height="30"/>
+                                    <state key="normal" title="Add"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="kWO-6C-mPB" firstAttribute="centerY" secondItem="o2T-W6-pHp" secondAttribute="centerY" id="649-5j-fM8"/>
+                                <constraint firstItem="kWO-6C-mPB" firstAttribute="width" secondItem="jYj-lL-Ta9" secondAttribute="width" id="MCi-dD-koG"/>
+                                <constraint firstAttribute="trailing" secondItem="kWO-6C-mPB" secondAttribute="trailing" constant="8" id="VJR-Xh-bWG"/>
+                                <constraint firstItem="kWO-6C-mPB" firstAttribute="leading" secondItem="jYj-lL-Ta9" secondAttribute="trailing" constant="8" id="hZ0-wC-bo8"/>
+                                <constraint firstItem="jYj-lL-Ta9" firstAttribute="leading" secondItem="o2T-W6-pHp" secondAttribute="leading" constant="8" id="ktY-S2-BQK"/>
+                                <constraint firstItem="jYj-lL-Ta9" firstAttribute="centerY" secondItem="o2T-W6-pHp" secondAttribute="centerY" id="ubE-80-3Dj"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="Cfb-KO-0GC" detailTextLabel="qww-cZ-HbH" style="IBUITableViewCellStyleValue1" id="zXy-9m-nxq">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zXy-9m-nxq" id="VQN-Wh-cvI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -46,8 +69,13 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3x-aW-o4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="hUV-Z7-kvR">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="305" y="401"/>
+            <point key="canvasLocation" x="300" y="401"/>
         </scene>
     </scenes>
 </document>
