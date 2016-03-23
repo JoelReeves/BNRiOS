@@ -41,4 +41,11 @@ class ItemsViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func toggleEditingMode(sender: UIButton) {
+        
+    }
+    
+    @IBAction func addNewItem(sender: UIButton) {
+        
+    }
 }
