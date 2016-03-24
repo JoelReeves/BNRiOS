@@ -132,6 +132,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="AZu-aD-XSn" id="DeI-oh-6Ye"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -148,6 +151,9 @@
                                                 <rect key="frame" x="51" y="0.0" width="509" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="AZu-aD-XSn" id="bkZ-jd-0kW"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -164,6 +170,9 @@
                                                 <rect key="frame" x="50" y="0.0" width="510" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="AZu-aD-XSn" id="Pcl-jp-fkz"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
