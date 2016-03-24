@@ -60,17 +60,49 @@
 		AB6919DC1C999405002DF934 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
-				AB6919EF1C99956C002DF934 /* ItemsViewController.swift */,
-				ABAFA2EB1CA2F63500BCFD1A /* ItemCell.swift */,
-				AB6919F71C999772002DF934 /* Item.swift */,
-				AB6919F91C999BB5002DF934 /* ItemStore.swift */,
+				AB84797E1CA4276400AF02C7 /* Storyboards */,
+				AB8479811CA427A900AF02C7 /* Controllers */,
+				AB8479801CA4278300AF02C7 /* Models */,
+				AB84797F1CA4277400AF02C7 /* Resources */,
 				AB6919DD1C999405002DF934 /* AppDelegate.swift */,
-				AB6919E11C999405002DF934 /* Main.storyboard */,
-				AB6919E41C999405002DF934 /* Assets.xcassets */,
-				AB6919E61C999405002DF934 /* LaunchScreen.storyboard */,
 				AB6919E91C999405002DF934 /* Info.plist */,
 			);
 			path = Homepwner;
+			sourceTree = "<group>";
+		};
+		AB84797E1CA4276400AF02C7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB6919E11C999405002DF934 /* Main.storyboard */,
+				AB6919E61C999405002DF934 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		AB84797F1CA4277400AF02C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB6919E41C999405002DF934 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AB8479801CA4278300AF02C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABAFA2EB1CA2F63500BCFD1A /* ItemCell.swift */,
+				AB6919F71C999772002DF934 /* Item.swift */,
+				AB6919F91C999BB5002DF934 /* ItemStore.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AB8479811CA427A900AF02C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB6919EF1C99956C002DF934 /* ItemsViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
