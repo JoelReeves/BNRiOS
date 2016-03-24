@@ -100,4 +100,19 @@ class ItemsViewController: UITableViewController {
             tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // if the triggered segue is the "ShowItem" segue
+        if segue.identifier == "ShowItem" {
+            
+            // figure out which row was tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
+                
+                // get the item associated with this row and pass it along
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destinationViewController as! DetailViewController
+                detailViewController.item = item
+            }
+        }
+    }
 }
