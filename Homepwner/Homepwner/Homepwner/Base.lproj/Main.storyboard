@@ -14,38 +14,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="o2T-W6-pHp">
-                            <rect key="frame" x="0.0" y="64" width="600" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYj-lL-Ta9">
-                                    <rect key="frame" x="8" y="15" width="288" height="30"/>
-                                    <state key="normal" title="Edit"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="Zg7-HM-QY2" eventType="touchUpInside" id="7HY-KN-Ie6"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWO-6C-mPB">
-                                    <rect key="frame" x="304" y="15" width="288" height="30"/>
-                                    <state key="normal" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="Zg7-HM-QY2" eventType="touchUpInside" id="m0F-Sl-S8Z"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="kWO-6C-mPB" firstAttribute="centerY" secondItem="o2T-W6-pHp" secondAttribute="centerY" id="649-5j-fM8"/>
-                                <constraint firstItem="kWO-6C-mPB" firstAttribute="width" secondItem="jYj-lL-Ta9" secondAttribute="width" id="MCi-dD-koG"/>
-                                <constraint firstAttribute="trailing" secondItem="kWO-6C-mPB" secondAttribute="trailing" constant="8" id="VJR-Xh-bWG"/>
-                                <constraint firstItem="kWO-6C-mPB" firstAttribute="leading" secondItem="jYj-lL-Ta9" secondAttribute="trailing" constant="8" id="hZ0-wC-bo8"/>
-                                <constraint firstItem="jYj-lL-Ta9" firstAttribute="leading" secondItem="o2T-W6-pHp" secondAttribute="leading" constant="8" id="ktY-S2-BQK"/>
-                                <constraint firstItem="jYj-lL-Ta9" firstAttribute="centerY" secondItem="o2T-W6-pHp" secondAttribute="centerY" id="ubE-80-3Dj"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="zXy-9m-nxq" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="152" width="600" height="65"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zXy-9m-nxq" id="VQN-Wh-cvI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
