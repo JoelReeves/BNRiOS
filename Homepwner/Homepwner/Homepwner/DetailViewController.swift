@@ -44,6 +44,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
+        // clear first responder
+        view.endEditing(true)
+        
         // save changes to an item
         item.name = nameField.text ?? ""
         item.serialNumber = serialNumberField.text
