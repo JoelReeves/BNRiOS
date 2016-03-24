@@ -14,6 +14,7 @@
 		AB6919F01C99956C002DF934 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6919EF1C99956C002DF934 /* ItemsViewController.swift */; };
 		AB6919F81C999772002DF934 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6919F71C999772002DF934 /* Item.swift */; };
 		AB6919FA1C999BB5002DF934 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6919F91C999BB5002DF934 /* ItemStore.swift */; };
+		AB8479831CA430C500AF02C7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8479821CA430C500AF02C7 /* DetailViewController.swift */; };
 		ABAFA2EC1CA2F63500BCFD1A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFA2EB1CA2F63500BCFD1A /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		AB6919EF1C99956C002DF934 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
 		AB6919F71C999772002DF934 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AB6919F91C999BB5002DF934 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		AB8479821CA430C500AF02C7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		ABAFA2EB1CA2F63500BCFD1A /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 		AB8479811CA427A900AF02C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB8479821CA430C500AF02C7 /* DetailViewController.swift */,
 				AB6919EF1C99956C002DF934 /* ItemsViewController.swift */,
 			);
 			name = Controllers;
@@ -179,6 +182,7 @@
 				AB6919F01C99956C002DF934 /* ItemsViewController.swift in Sources */,
 				AB6919F81C999772002DF934 /* Item.swift in Sources */,
 				AB6919FA1C999BB5002DF934 /* ItemStore.swift in Sources */,
+				AB8479831CA430C500AF02C7 /* DetailViewController.swift in Sources */,
 				AB6919DE1C999405002DF934 /* AppDelegate.swift in Sources */,
 				ABAFA2EC1CA2F63500BCFD1A /* ItemCell.swift in Sources */,
 			);

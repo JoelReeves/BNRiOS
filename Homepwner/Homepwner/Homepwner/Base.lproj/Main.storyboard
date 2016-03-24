@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="300" y="401"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="hKh-X3-5en">
             <objects>
-                <viewController id="AZu-aD-XSn" sceneMemberID="viewController">
+                <viewController id="AZu-aD-XSn" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bh1-wt-oYr"/>
                         <viewControllerLayoutGuide type="bottom" id="mKE-7p-6MR"/>
@@ -187,6 +187,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QNf-PF-ogD" secondAttribute="trailing" id="w3R-he-14H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="A11-eD-jmu" id="Izq-59-rQE"/>
+                        <outlet property="nameField" destination="nad-FZ-ezN" id="uag-EC-Fp5"/>
+                        <outlet property="serialNumberField" destination="1nU-Zk-Pwd" id="FoA-J8-5bF"/>
+                        <outlet property="valueField" destination="6o4-VW-dJ8" id="QTF-NP-yXV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsh-mT-idN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
