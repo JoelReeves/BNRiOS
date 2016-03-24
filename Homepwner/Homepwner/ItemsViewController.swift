@@ -94,7 +94,7 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func addNewItem(sender: UIButton) {
+    @IBAction func addNewItem(sender: AnyObject) {
         // create a new item and add it to the ItemStore
         let newItem = itemStore.createItem()
         
