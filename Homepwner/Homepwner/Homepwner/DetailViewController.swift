@@ -72,4 +72,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    @IBAction func takePicture(sender: UIBarButtonItem) {
+        
+    }
 }
