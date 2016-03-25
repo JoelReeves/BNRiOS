@@ -174,7 +174,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Cgo-Bq-CXs"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="Cju-eL-1gu"/>
+                                    <barButtonItem systemItem="camera" id="Cju-eL-1gu"/>
                                 </items>
                             </toolbar>
                         </subviews>
