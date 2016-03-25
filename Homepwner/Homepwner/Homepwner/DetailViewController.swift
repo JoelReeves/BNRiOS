@@ -22,6 +22,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
     }
     
+    var imageStore: ImageStore!
+    
     let numberFormatter: NSNumberFormatter = {
        let formatter = NSNumberFormatter()
         formatter.numberStyle = .DecimalStyle
