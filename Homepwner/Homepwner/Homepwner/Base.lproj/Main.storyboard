@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QNf-PF-ogD">
-                                <rect key="frame" x="20" y="72" width="560" height="520"/>
+                                <rect key="frame" x="20" y="72" width="560" height="476"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-qw-OKA">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -160,7 +160,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIg-IH-AUl">
-                                        <rect key="frame" x="0.0" y="143" width="560" height="378"/>
+                                        <rect key="frame" x="0.0" y="143" width="560" height="334"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -168,13 +168,25 @@
                                     <constraint firstItem="gYj-FY-OFV" firstAttribute="leading" secondItem="OkB-AP-wBc" secondAttribute="leading" id="WOi-HO-fBN"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3y-Be-7VT">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Cgo-Bq-CXs"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="Cju-eL-1gu"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="mKE-7p-6MR" firstAttribute="top" secondItem="V3y-Be-7VT" secondAttribute="bottom" id="68K-2y-XwK"/>
+                            <constraint firstAttribute="trailing" secondItem="V3y-Be-7VT" secondAttribute="trailing" id="D9x-Yy-NHd"/>
+                            <constraint firstItem="V3y-Be-7VT" firstAttribute="leading" secondItem="DOh-I4-Hqm" secondAttribute="leading" id="GCA-ol-xIO"/>
                             <constraint firstItem="QNf-PF-ogD" firstAttribute="top" secondItem="bh1-wt-oYr" secondAttribute="bottom" constant="8" id="f2H-uE-sLv"/>
                             <constraint firstAttribute="leadingMargin" secondItem="QNf-PF-ogD" secondAttribute="leading" id="hBJ-HX-E6b"/>
-                            <constraint firstItem="mKE-7p-6MR" firstAttribute="top" secondItem="QNf-PF-ogD" secondAttribute="bottom" constant="8" id="puR-9X-V7a"/>
+                            <constraint firstItem="V3y-Be-7VT" firstAttribute="top" secondItem="QNf-PF-ogD" secondAttribute="bottom" constant="8" id="j3K-m3-L6E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QNf-PF-ogD" secondAttribute="trailing" id="w3R-he-14H"/>
                         </constraints>
                         <connections>
