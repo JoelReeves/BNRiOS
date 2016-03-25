@@ -73,6 +73,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func takePicture(sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
         
+        // if device has a camera, take a picture; otherwise choose from photo library
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+        } else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
     }
 }
