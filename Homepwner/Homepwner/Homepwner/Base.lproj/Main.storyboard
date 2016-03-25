@@ -183,6 +183,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="A11-eD-jmu" id="Izq-59-rQE"/>
+                        <outlet property="imageView" destination="dIg-IH-AUl" id="1rb-1K-x8n"/>
                         <outlet property="nameField" destination="nad-FZ-ezN" id="uag-EC-Fp5"/>
                         <outlet property="serialNumberField" destination="1nU-Zk-Pwd" id="FoA-J8-5bF"/>
                         <outlet property="valueField" destination="6o4-VW-dJ8" id="QTF-NP-yXV"/>
