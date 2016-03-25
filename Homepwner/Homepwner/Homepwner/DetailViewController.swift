@@ -87,4 +87,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         // place the image picker on the screen
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        // get picked image from info dictionary
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        // put that image on the screen in the image view
+        imageView.image = image
+        
+        // dismiss the image picker
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
