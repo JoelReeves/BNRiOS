@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var trashBarButton: UIBarButtonItem!
     
     var item: Item! {
         didSet {
@@ -51,8 +52,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         let key = item.itemKey
         
         // if there is an associated image with the item, display it on the image view
-        let imageToDisplay = imageStore.imageForKey(key)
-        imageView.image = imageToDisplay
+        if let imageToDisplay = imageStore.imageForKey(key) {
+            imageView.image = imageToDisplay
+            trashBarButton.enabled = true
+        } else {
+            trashBarButton.enabled = false
+        }
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -97,6 +103,27 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         // place the image picker on the screen
         presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func deletePicture(sender: UIBarButtonItem) {
+        let title = "Delete Picture?"
+        let message = "Are you sure you want to delete this picture?"
+        
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        ac.addAction(cancelAction)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: { (action) -> Void in
+            // remove the item from the ImageStore, remove the image from the ImageView, disable the trash bar button item
+            self.imageStore.deleteImageForKey(self.item.itemKey)
+            self.imageView.image = nil
+            self.trashBarButton.enabled = false
+        })
+        ac.addAction(deleteAction)
+        
+        // display the alert controller
+        presentViewController(ac, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
