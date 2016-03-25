@@ -83,5 +83,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
         
         imagePicker.delegate = self
+        
+        // place the image picker on the screen
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
 }
