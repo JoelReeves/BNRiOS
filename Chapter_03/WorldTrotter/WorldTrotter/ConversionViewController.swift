@@ -45,15 +45,17 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
-        let digits = NSCharacterSet.decimalDigitCharacterSet()
-        let replacementTextHasNumbers = string.rangeOfCharacterFromSet(digits)
-        
         let existingTextHasDecimalSeperator = textField.text?.rangeOfString(".")
         let replacementTextHasDecimalSeperator = string.rangeOfString(".")
         
-        if existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil {
+        let letters = NSCharacterSet.letterCharacterSet()
+        let replacementTextHasLetters = string.rangeOfCharacterFromSet(letters)
+        
+        if replacementTextHasLetters != nil {
             return false
-        } else if replacementTextHasNumbers == nil {
+        }
+        
+        if (existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil) {
             return false
         } else {
             return true
