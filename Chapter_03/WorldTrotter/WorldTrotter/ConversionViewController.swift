@@ -51,11 +51,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         let letters = NSCharacterSet.letterCharacterSet()
         let replacementTextHasLetters = string.rangeOfCharacterFromSet(letters)
         
-        if replacementTextHasLetters != nil {
-            return false
-        }
-        
-        if (existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil) {
+        if (replacementTextHasLetters != nil || (existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil)) {
             return false
         } else {
             return true
