@@ -17,6 +17,12 @@ class ItemStore {
         return documentDirectory.URLByAppendingPathComponent("items.archive")
     }()
     
+    init() {
+        if let archiveItems = NSKeyedUnarchiver.unarchiveObjectWithFile(itemArchiveURL.path!) as? [Item] {
+            allItems += archiveItems
+        }
+    }
+    
     func createItem() -> Item {
         let newItem = Item(random: true)
         
