@@ -96,8 +96,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N0t-Ky-Vsv">
                                 <rect key="frame" x="20" y="72" width="560" height="476"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QNf-PF-ogD">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="476"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QNf-PF-ogD">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="135"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-qw-OKA">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -162,15 +162,15 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIg-IH-AUl">
-                                                <rect key="frame" x="0.0" y="143" width="560" height="334"/>
-                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="OkB-AP-wBc" firstAttribute="leading" secondItem="RoQ-MV-Ej7" secondAttribute="leading" id="3CD-pL-pUk"/>
                                             <constraint firstItem="gYj-FY-OFV" firstAttribute="leading" secondItem="OkB-AP-wBc" secondAttribute="leading" id="WOi-HO-fBN"/>
                                         </constraints>
                                     </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIg-IH-AUl">
+                                        <rect key="frame" x="0.0" y="143" width="560" height="334"/>
+                                    </imageView>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3y-Be-7VT">
