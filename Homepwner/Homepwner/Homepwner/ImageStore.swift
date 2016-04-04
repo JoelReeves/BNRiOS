@@ -28,7 +28,18 @@ class ImageStore {
     
     // retrieving image from the dictionary
     func imageForKey(key: String) -> UIImage? {
-        return cache.objectForKey(key) as? UIImage
+        if let existingImage = cache.objectForKey(key) as? UIImage {
+            return existingImage
+        }
+        
+        let imageURL = imageURLForKey(key)
+        
+        guard let imageFromDisk = UIImage(contentsOfFile: imageURL.path!) else {
+            return nil
+        }
+        
+        cache.setObject(imageFromDisk, forKey: key)
+        return imageFromDisk
     }
     
     // deleting image from the dictionary
