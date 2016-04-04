@@ -19,8 +19,8 @@ class ImageStore {
         // create full URL for image
         let imageURL = imageURLForKey(key)
         
-        // turn image into JPEG data
-        if let data = UIImageJPEGRepresentation(image, 0.5) {
+        // turn image into PNG data
+        if let data = UIImagePNGRepresentation(image) {
             // write it to full URL
             data.writeToURL(imageURL, atomically: true)
         }
