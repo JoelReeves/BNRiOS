@@ -15,6 +15,15 @@ class ImageStore {
     // adding image to the dictionary
     func setImage(image: UIImage, forKey key: String) {
         cache.setObject(image, forKey: key)
+        
+        // create full URL for image
+        let imageURL = imageURLForKey(key)
+        
+        // turn image into JPEG data
+        if let data = UIImageJPEGRepresentation(image, 0.5) {
+            // write it to full URL
+            data.writeToURL(imageURL, atomically: true)
+        }
     }
     
     // retrieving image from the dictionary
