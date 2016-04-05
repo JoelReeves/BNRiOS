@@ -38,6 +38,11 @@ class DrawView: UIView {
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.delaysTouchesBegan = true
         addGestureRecognizer(doubleTapRecognizer)
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DrawView.tap))
+        tapRecognizer.delaysTouchesBegan = true
+        tapRecognizer.requireGestureRecognizerToFail(doubleTapRecognizer)
+        addGestureRecognizer(tapRecognizer)
     }
     
     func doubleTap(gestureRecognizer: UIGestureRecognizer) {
@@ -46,6 +51,10 @@ class DrawView: UIView {
         currentLines.removeAll(keepCapacity: false)
         finishedLines.removeAll(keepCapacity: false)
         setNeedsDisplay()
+    }
+    
+    func tap(gestureRecognizer: UIGestureRecognizer) {
+        print("recognized a tap")
     }
     
     func strokeLine(line: Line) {
