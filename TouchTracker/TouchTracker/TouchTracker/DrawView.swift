@@ -84,6 +84,17 @@ class DrawView: UIView {
         setNeedsDisplay()
     }
     
+    func deleteLine(sender: AnyObject) {
+        // remove the selected line from the list of finishedLines
+        if let index = selectedLineIndex {
+            finishedLines.removeAtIndex(index)
+            selectedLineIndex = nil
+            
+            // redraw everything
+            setNeedsDisplay()
+        }
+    }
+    
     func strokeLine(line: Line) {
         let path = UIBezierPath()
         path.lineWidth = lineThickness
