@@ -34,7 +34,7 @@ class DrawView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "doubleTap")
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DrawView.doubleTap))
         doubleTapRecognizer.numberOfTapsRequired = 2
         addGestureRecognizer(doubleTapRecognizer)
     }
