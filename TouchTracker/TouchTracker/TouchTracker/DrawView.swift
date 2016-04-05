@@ -46,6 +46,10 @@ class DrawView: UIView {
         addGestureRecognizer(tapRecognizer)
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
     func doubleTap(gestureRecognizer: UIGestureRecognizer) {
         print("recognized a double tap")
         
