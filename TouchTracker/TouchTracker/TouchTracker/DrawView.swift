@@ -77,8 +77,11 @@ class DrawView: UIView {
             
             // tell the menu where it should come from and show it
             menu.setTargetRect(CGRect(x: point.x, y: point.y, width: 2, height: 2), inView: self)
-            menu.setMenuVisible(false, animated: true)
+            menu.setMenuVisible(true, animated: true)
             
+        } else {
+            // hide the menu if no line is selected
+            menu.setMenuVisible(false, animated: true)
         }
         
         setNeedsDisplay()
