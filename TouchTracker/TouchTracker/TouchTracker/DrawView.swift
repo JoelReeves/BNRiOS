@@ -86,6 +86,8 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
                 finishedLines[index].end.x += translation.x
                 finishedLines[index].end.x += translation.y
                 
+                gestureRecognizer.setTranslation(CGPoint.zero, inView: self)
+                
                 // redraw the screen
                 setNeedsDisplay()
             }
