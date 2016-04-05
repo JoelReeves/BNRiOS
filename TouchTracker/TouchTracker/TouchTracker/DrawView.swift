@@ -72,6 +72,27 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     
     func moveLine(gestureRecognizer: UIPanGestureRecognizer) {
         print("recognized a pan")
+        
+        // if a line is selected
+        if let index = selectedLineIndex {
+            // when the pan recognizer changes its position
+            if gestureRecognizer.state == .Changed {
+                // how far has the pan moved?
+                let translation = gestureRecognizer.translationInView(self)
+                
+                // add the translation to the current beginning and end points of the line
+                finishedLines[index].begin.x += translation.x
+                finishedLines[index].begin.y += translation.y
+                finishedLines[index].end.x += translation.x
+                finishedLines[index].end.x += translation.y
+                
+                // redraw the screen
+                setNeedsDisplay()
+            }
+        } else {
+            // don't do anything if no line is selected
+            return
+        }
     }
     
     func longPress(gestureRecognizer: UIGestureRecognizer) {
