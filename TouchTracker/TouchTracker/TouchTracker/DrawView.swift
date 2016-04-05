@@ -10,7 +10,7 @@ import UIKit
 
 class DrawView: UIView {
     
-    var currentLine: Line?
+    var currentLine = [NSValue: Line]()
     var finishedLines = [Line]()
     
     func strokeLine(line: Line) {
