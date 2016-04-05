@@ -31,10 +31,11 @@ class DrawView: UIView {
             strokeLine(line)
         }
         
-        if let line = currentLine {
-            // if there is a line currently being drawn, do it in red
-            UIColor.redColor().setStroke()
-            strokeLine(line)
+        // draw current lines in red
+        UIColor.redColor().setStroke()
+        
+        for (_, Line) in currentLines {
+            strokeLine(Line)
         }
     }
     
