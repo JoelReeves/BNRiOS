@@ -12,6 +12,7 @@ class DrawView: UIView {
     
     var currentLines = [NSValue: Line]()
     var finishedLines = [Line]()
+    var moveRecognizer: UIPanGestureRecognizer!
     var selectedLineIndex: Int? {
         didSet {
             if selectedLineIndex == nil {
@@ -54,10 +55,18 @@ class DrawView: UIView {
         
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(DrawView.longPress))
         addGestureRecognizer(longPressRecognizer)
+        
+        moveRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DrawView.moveLine))
+        moveRecognizer.cancelsTouchesInView = false
+        addGestureRecognizer(moveRecognizer)
     }
     
     override func canBecomeFirstResponder() -> Bool {
         return true
+    }
+    
+    func moveLine(gestureRecognizer: UIPanGestureRecognizer) {
+        print("recognized a pan")
     }
     
     func longPress(gestureRecognizer: UIGestureRecognizer) {
