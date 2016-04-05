@@ -55,10 +55,13 @@ class DrawView: UIView {
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first!
-        let location = touch.locationInView(self)
+        // log statement to see the order of events
+        print(#function)
         
-        currentLine?.end = location
+        for touch in touches {
+            let key = NSValue(nonretainedObject: touch)
+            currentLines[key]?.end = touch.locationInView(self)
+        }
         
         setNeedsDisplay()
     }
