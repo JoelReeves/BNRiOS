@@ -82,4 +82,13 @@ class DrawView: UIView {
         
         setNeedsDisplay()
     }
+    
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        // log statement to see the order of events
+        print(#function)
+        
+        currentLines.removeAll()
+        
+        setNeedsDisplay()
+    }
 }
