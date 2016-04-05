@@ -56,6 +56,12 @@ class DrawView: UIView {
     
     func tap(gestureRecognizer: UIGestureRecognizer) {
         print("recognized a tap")
+        
+        selectedLineIndex = nil
+        let point = gestureRecognizer.locationInView(self)
+        selectedLineIndex = indexOfLineAtPoint(point)
+        
+        setNeedsDisplay()
     }
     
     func strokeLine(line: Line) {
