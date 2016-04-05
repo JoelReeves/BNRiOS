@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawView: UIView {
+class DrawView: UIView, UIGestureRecognizerDelegate {
     
     var currentLines = [NSValue: Line]()
     var finishedLines = [Line]()
@@ -57,11 +57,16 @@ class DrawView: UIView {
         addGestureRecognizer(longPressRecognizer)
         
         moveRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DrawView.moveLine))
+        moveRecognizer.delegate = self
         moveRecognizer.cancelsTouchesInView = false
         addGestureRecognizer(moveRecognizer)
     }
     
     override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
