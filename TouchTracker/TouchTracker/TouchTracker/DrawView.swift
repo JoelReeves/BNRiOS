@@ -10,7 +10,7 @@ import UIKit
 
 class DrawView: UIView {
     
-    var currentLine = [NSValue: Line]()
+    var currentLines = [NSValue: Line]()
     var finishedLines = [Line]()
     
     func strokeLine(line: Line) {
@@ -39,12 +39,17 @@ class DrawView: UIView {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first!
+        // log statement to see the order of events
+        print(#function)
         
-        // get location of the touch in the view's corrdinate system
-        let location = touch.locationInView(self)
-        
-        currentLine = Line(begin: location, end: location)
+        for touch in touches {
+            let location = touch.locationInView(self)
+            
+            let newLine = Line(begin: location, end: location)
+            
+            let key = NSValue(nonretainedObject: touch)
+            currentLines[key] = newLine
+        }
         
         setNeedsDisplay()
     }
