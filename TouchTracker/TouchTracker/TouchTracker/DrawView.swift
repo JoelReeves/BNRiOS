@@ -140,4 +140,26 @@ class DrawView: UIView {
         
         setNeedsDisplay()
     }
+    
+    func indexOfLineAtPoint(point: CGPoint) -> Int? {
+        // find a line close to point
+        for (index, line) in finishedLines.enumerate() {
+            let begin = line.begin
+            let end = line.end
+            
+            // check a few points on the line
+            for t in CGFloat(0).stride(to: 1.0, by: 0.05) {
+                let x = begin.x + ((end.x - begin.x) * t)
+                let y = begin.y + ((end.y - begin.y) * t)
+                
+                // if the tapped point is within 20 points, return the line
+                if hypot(x - point.x, y - point.y) < 20.0 {
+                    return index
+                }
+            }
+        }
+        
+        // if nothing is close enough to the tapped point, we didn't select a line
+        return nil
+    }
 }
