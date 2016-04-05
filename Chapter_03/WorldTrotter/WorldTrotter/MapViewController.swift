@@ -26,7 +26,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         
-        segmentedControl.addTarget(self, action: "mapTypeChanged:", forControlEvents: .ValueChanged)
+        segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), forControlEvents: .ValueChanged)
         
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(segmentedControl)
@@ -45,7 +45,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationButton.frame = CGRectMake(135, 75, 100, 50)
         locationButton.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
         locationButton.setTitle("My Location", forState: .Normal)
-        locationButton.addTarget(self, action: "buttonAction:", forControlEvents: .TouchUpInside)
+        locationButton.addTarget(self, action: #selector(MapViewController.buttonAction(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(locationButton)
     }
     
