@@ -48,4 +48,13 @@ class DrawView: UIView {
         
         setNeedsDisplay()
     }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches.first!
+        let location = touch.locationInView(self)
+        
+        currentLine?.end = location
+        
+        setNeedsDisplay()
+    }
 }
