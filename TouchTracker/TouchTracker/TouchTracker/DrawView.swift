@@ -67,15 +67,17 @@ class DrawView: UIView {
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if var line = currentLine {
-            let touch = touches.first!
-            let location = touch.locationInView(self)
-            line.end = location
-            
-            finishedLines.append(line)
-        }
+        // log statement to see the order of events
+        print(#function)
         
-        currentLine = nil
+        for touch in touches {
+            let key = NSValue(nonretainedObject: touch)
+            if var line = currentLines[key] {
+                line.end = touch.locationInView(self)
+                finishedLines.append(line)
+                currentLines.removeValueForKey(key)
+            }
+        }
         
         setNeedsDisplay()
     }
