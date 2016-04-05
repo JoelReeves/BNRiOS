@@ -12,6 +12,7 @@ class DrawView: UIView {
     
     var currentLines = [NSValue: Line]()
     var finishedLines = [Line]()
+    var selectedLineIndex: Int?
     
     @IBInspectable var finishedLineColor: UIColor = UIColor.blueColor() {
         didSet {
@@ -78,6 +79,12 @@ class DrawView: UIView {
         
         for (_, Line) in currentLines {
             strokeLine(Line)
+        }
+        
+        if let index = selectedLineIndex {
+            UIColor.greenColor().setStroke()
+            let selectedLine = finishedLines[index]
+            strokeLine(selectedLine)
         }
     }
     
