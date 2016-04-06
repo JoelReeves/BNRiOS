@@ -10,4 +10,8 @@ import Foundation
 
 class PhotoStore {
     
+    let session: NSURLSession = {
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        return NSURLSession(configuration: config)
+    }()
 }
