@@ -14,4 +14,8 @@ enum Method: String {
 
 struct FlickrAPI {
     private static let baseURLString = "https://api.flickr.com/services/rest"
+    
+    private static func flickrURL(method method: Method, parameters: [String:String]?) -> NSURL {
+        return NSURL()
+    }
 }
