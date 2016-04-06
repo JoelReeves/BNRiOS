@@ -12,6 +12,11 @@ enum Method: String {
     case RecentPhotos = "flickr.photos.getRecent"
 }
 
+enum PhotosResult {
+    case Success([Photo])
+    case Failure(ErrorType)
+}
+
 struct FlickrAPI {
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let APIkey = "3d0870dc976f62488fb60b3d0dbb71a4"
