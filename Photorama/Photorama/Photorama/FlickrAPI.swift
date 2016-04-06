@@ -27,7 +27,7 @@ struct FlickrAPI {
     
     private static let dateFormatter: NSDateFormatter = {
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
     
@@ -99,7 +99,7 @@ struct FlickrAPI {
         guard let
             photoID = json["id"] as? String,
             title = json["title"] as? String,
-            dateString = json["dateTaken"] as? String,
+            dateString = json["datetaken"] as? String,
             photoURLString = json["url_h"] as? String,
             url = NSURL(string: photoURLString),
             dateTaken = dateFormatter.dateFromString(dateString) else {
