@@ -17,6 +17,10 @@ enum PhotosResult {
     case Failure(ErrorType)
 }
 
+enum FlickrError: ErrorType {
+    case InvalidJSONData
+}
+
 struct FlickrAPI {
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let APIkey = "3d0870dc976f62488fb60b3d0dbb71a4"
