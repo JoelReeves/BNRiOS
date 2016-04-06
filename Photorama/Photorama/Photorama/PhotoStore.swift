@@ -6,9 +6,18 @@
 //  Copyright © 2016 Bromance Labs. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PhotoStore {
+    
+    enum ImageResult {
+        case Success(UIImage)
+        case Failure(ErrorType)
+    }
+    
+    enum PhotoError: ErrorType {
+        case ImageCreationError
+    }
     
     let session: NSURLSession = {
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
