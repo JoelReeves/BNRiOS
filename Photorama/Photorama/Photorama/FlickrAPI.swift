@@ -18,4 +18,8 @@ struct FlickrAPI {
     private static func flickrURL(method method: Method, parameters: [String:String]?) -> NSURL {
         return NSURL()
     }
+    
+    static func recentPhotosURL() -> NSURL {
+        return flickrURL(method: .RecentPhotos, parameters: ["extras": "url_h,date_taken"])
+    }
 }
