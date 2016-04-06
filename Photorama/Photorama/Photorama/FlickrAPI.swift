@@ -82,4 +82,19 @@ struct FlickrAPI {
             return .Failure(error)
         }
     }
+    
+    private static func photoFromJSONObject(json: [String: AnyObject]) -> Photo? {
+        guard let
+            photoID = json["id"] as? String,
+            title = json["title"] as? String,
+            dateString = json["dateTaken"] as? String,
+            photoURLString = json["url_h"] as? String,
+            url = NSURL(string: photoURLString),
+            dateTaken = dateFormatter.dateFromString(dateString) else {
+                // don't have enough information to construct a Photo
+                return nil
+        }
+        
+        return Photo(title: title, photoID: photoID, remoteURL: url, dateTaken: dateTaken)
+    }
 }
