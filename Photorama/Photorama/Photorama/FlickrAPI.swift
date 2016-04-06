@@ -53,4 +53,14 @@ struct FlickrAPI {
     static func recentPhotosURL() -> NSURL {
         return flickrURL(method: .RecentPhotos, parameters: ["extras": "url_h,date_taken"])
     }
+    
+    static func photosFromJSONData(data: NSData) -> PhotosResult {
+        do {
+            let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+            var finalPhotos = [Photo]()
+            return .Success(finalPhotos)
+        } catch let error {
+            return .Failure(error)
+        }
+    }
 }
