@@ -25,6 +25,12 @@ struct FlickrAPI {
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let APIkey = "3d0870dc976f62488fb60b3d0dbb71a4"
     
+    private static let dateFormatter: NSDateFormatter = {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        return formatter
+    }()
+    
     private static func flickrURL(method method: Method, parameters: [String:String]?) -> NSURL {
         let components = NSURLComponents(string: baseURLString)!
         
