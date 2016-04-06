@@ -37,4 +37,12 @@ class PhotoStore {
         
         task.resume()
     }
+    
+    func processRecentPhotosRequest(data data: NSData?, error: NSError?) -> PhotosResult {
+        guard let jsonData = data else {
+            return .Failure(error!)
+        }
+        
+        return FlickrAPI.photosFromJSONData(jsonData)
+    }
 }
