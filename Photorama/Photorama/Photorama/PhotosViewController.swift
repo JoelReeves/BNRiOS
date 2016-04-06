@@ -29,7 +29,9 @@ class PhotosViewController: UIViewController {
                         
                         switch imageResult {
                         case let .Success(image):
-                            self.imageView.image = image
+                            NSOperationQueue.mainQueue().addOperationWithBlock {
+                                self.imageView.image = image
+                            }
                         case let .Failure(error):
                             print("error downloading image: \(error)")
                         }
