@@ -52,6 +52,13 @@ class PhotoStore {
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
             
+            let result = self.processImageRequest(data: data, error: error)
+            
+            if case let .Success(image) = result {
+                photo.image = image
+            }
+            
+            completion(result)
         }
         
         task.resume()
