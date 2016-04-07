@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB5FD7D41CB6957600269FAF /* PhotoDataSoruce.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD7D31CB6957600269FAF /* PhotoDataSoruce.swift */; };
+		AB5FD7D41CB6957600269FAF /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD7D31CB6957600269FAF /* PhotoDataSource.swift */; };
 		AB6DE8541CB41D4B0030EA03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6DE8531CB41D4B0030EA03 /* AppDelegate.swift */; };
 		AB6DE8591CB41D4B0030EA03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6DE8571CB41D4B0030EA03 /* Main.storyboard */; };
 		AB6DE85B1CB41D4B0030EA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6DE85A1CB41D4B0030EA03 /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB5FD7D31CB6957600269FAF /* PhotoDataSoruce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSoruce.swift; sourceTree = "<group>"; };
+		AB5FD7D31CB6957600269FAF /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		AB6DE8501CB41D4B0030EA03 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6DE8531CB41D4B0030EA03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6DE8581CB41D4B0030EA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				ABCD17831CB53DF500F9CF76 /* FlickrAPI.swift */,
 				ABCD17851CB545E400F9CF76 /* PhotoStore.swift */,
 				ABCD17871CB549A200F9CF76 /* Photo.swift */,
-				AB5FD7D31CB6957600269FAF /* PhotoDataSoruce.swift */,
+				AB5FD7D31CB6957600269FAF /* PhotoDataSource.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCD17841CB53DF500F9CF76 /* FlickrAPI.swift in Sources */,
-				AB5FD7D41CB6957600269FAF /* PhotoDataSoruce.swift in Sources */,
+				AB5FD7D41CB6957600269FAF /* PhotoDataSource.swift in Sources */,
 				AB6DE8691CB41DCB0030EA03 /* PhotosViewController.swift in Sources */,
 				ABCD17861CB545E400F9CF76 /* PhotoStore.swift in Sources */,
 				AB6DE8541CB41D4B0030EA03 /* AppDelegate.swift in Sources */,

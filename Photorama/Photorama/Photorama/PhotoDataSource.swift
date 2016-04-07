@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoDataSoruce: NSObject, UICollectionViewDataSource {
+class PhotoDataSource: NSObject, UICollectionViewDataSource {
     
     var photos = [Photo]()
     

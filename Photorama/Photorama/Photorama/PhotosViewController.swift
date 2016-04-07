@@ -12,7 +12,7 @@ class PhotosViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     var store: PhotoStore!
-    let photoDataSource = PhotoDataSoruce()
+    let photoDataSource = PhotoDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
