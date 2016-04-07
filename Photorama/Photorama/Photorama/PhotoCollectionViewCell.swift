@@ -13,5 +13,13 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var spinner: UIActivityIndicatorView!
     
-    
+    func updateWithImage(image: UIImage?) {
+        if let imageToDisplay = image {
+            spinner.stopAnimating()
+            imageView.image = imageToDisplay
+        } else {
+            spinner.startAnimating()
+            imageView.image = nil
+        }
+    }
 }
