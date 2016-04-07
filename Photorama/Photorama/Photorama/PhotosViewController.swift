@@ -37,4 +37,23 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             }
         }
     }
+    
+    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        let photo = photoDataSource.photos[indexPath.row]
+        
+        // download the image data
+        store.fetchImageForPhoto(photo) { (result) -> Void in
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock() {
+                // find the most recent indexPath
+                let photoIndex = self.photoDataSource.photos.indexOf(photo)!
+                let photoIndexPath = NSIndexPath(forRow: photoIndex, inSection: 0)
+                
+                // when the request finishes, update the cell only if it's visible
+                if let cell = self.collectionView.cellForItemAtIndexPath([photoIndexPath]) as? PhotoCollectionViewCell {
+                    cell.updateWithImage(photo.image)
+                }
+            }
+        }
+    }
 }
