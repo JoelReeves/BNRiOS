@@ -17,22 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l3k-Fk-zap">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mzb-Xh-pvu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wbP-gc-fYL">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="bM9-Hk-5lF">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l3k-Fk-zap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WGi-NZ-fbI"/>
-                            <constraint firstAttribute="trailing" secondItem="l3k-Fk-zap" secondAttribute="trailing" id="XDq-S6-Px2"/>
-                            <constraint firstItem="l3k-Fk-zap" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fXe-a1-AMM"/>
-                            <constraint firstItem="l3k-Fk-zap" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xrG-mW-ycq"/>
+                            <constraint firstAttribute="trailing" secondItem="Mzb-Xh-pvu" secondAttribute="trailing" id="8uq-Jr-AGn"/>
+                            <constraint firstAttribute="bottom" secondItem="Mzb-Xh-pvu" secondAttribute="bottom" id="e0R-lU-rpi"/>
+                            <constraint firstItem="Mzb-Xh-pvu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sWm-uP-VXL"/>
+                            <constraint firstItem="Mzb-Xh-pvu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vfM-iS-Pvg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bQ1-Gj-vMg"/>
-                    <connections>
-                        <outlet property="imageView" destination="l3k-Fk-zap" id="H1g-vK-AeT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
