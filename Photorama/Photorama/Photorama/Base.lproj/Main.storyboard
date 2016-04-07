@@ -48,6 +48,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bQ1-Gj-vMg"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Mzb-Xh-pvu" id="MaO-68-yCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

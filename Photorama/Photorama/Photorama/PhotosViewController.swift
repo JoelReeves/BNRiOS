@@ -10,11 +10,14 @@ import UIKit
 
 class PhotosViewController: UIViewController {
     
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var collectionView: UICollectionView!
     var store: PhotoStore!
+    let photoDataSource = PhotoDataSoruce()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.dataSource = photoDataSource
         
         store.fectchRecentPhotos() {
             (photosResult) -> Void in
