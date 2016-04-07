@@ -22,27 +22,17 @@ class PhotosViewController: UIViewController {
         store.fectchRecentPhotos() {
             (photosResult) -> Void in
             
-            switch photosResult {
-            case let .Success(photos):
-                print("successfully found \(photos.count) recent photos")
-                
-                if let firstPhoto = photos.first {
-                    self.store.fetchImageForPhoto(firstPhoto) {
-                        (imageResult) -> Void in
-                        
-                        switch imageResult {
-                        case let .Success(image):
-                            NSOperationQueue.mainQueue().addOperationWithBlock {
-                                self.imageView.image = image
-                            }
-                        case let .Failure(error):
-                            print("error downloading image: \(error)")
-                        }
-                    }
+            NSOperationQueue.mainQueue().addOperationWithBlock() {
+                switch photosResult {
+                case let .Success(photos):
+                    print("successfully found \(photos.count) recent photos")
+                    self.photoDataSource.photos = photos
+                case let .Failure(error):
+                    self.photoDataSource.photos.removeAll()
+                    print("error fetching recent photos: \(error)")
                 }
                 
-            case let .Failure(error):
-                print("error fetching recent photos: \(error)")
+                self.collectionView.reloadSections(NSIndexSet(index: 0))
             }
         }
     }
