@@ -50,7 +50,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 let photoIndexPath = NSIndexPath(forRow: photoIndex, inSection: 0)
                 
                 // when the request finishes, update the cell only if it's visible
-                if let cell = self.collectionView.cellForItemAtIndexPath([photoIndexPath]) as? PhotoCollectionViewCell {
+                if let cell = self.collectionView.cellForItemAtIndexPath(photoIndexPath) as? PhotoCollectionViewCell {
                     cell.updateWithImage(photo.image)
                 }
             }
