@@ -53,6 +53,10 @@
                                             <constraint firstItem="NzV-3S-6aV" firstAttribute="bottom" secondItem="bM9-Hk-5lF" secondAttribute="bottomMargin" id="x1a-2R-Rlt"/>
                                             <constraint firstItem="NzV-3S-6aV" firstAttribute="leading" secondItem="bM9-Hk-5lF" secondAttribute="leadingMargin" id="zUO-QA-x6M"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="NzV-3S-6aV" id="xhm-6k-J41"/>
+                                            <outlet property="spinner" destination="IWq-bo-bEv" id="EWz-iE-CTf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
