@@ -11,4 +11,12 @@ import UIKit
 class PhotoInfoViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
+    
+    var store: PhotoStore!
+    
+    var photo: Photo! {
+        didSet {
+            navigationItem.title = photo.title
+        }
+    }
 }
