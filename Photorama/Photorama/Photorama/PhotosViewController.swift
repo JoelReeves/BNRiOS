@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController {
+class PhotosViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     var store: PhotoStore!
@@ -18,6 +18,7 @@ class PhotosViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.dataSource = photoDataSource
+        collectionView.delegate = self
         
         store.fectchRecentPhotos() {
             (photosResult) -> Void in
