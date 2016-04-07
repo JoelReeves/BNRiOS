@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Photos View Controller-->
@@ -33,9 +34,25 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NzV-3S-6aV">
+                                                    <rect key="frame" x="8" y="8" width="74" height="74"/>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="IWq-bo-bEv">
+                                                    <rect key="frame" x="35" y="35" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="IWq-bo-bEv" firstAttribute="centerY" secondItem="bM9-Hk-5lF" secondAttribute="centerY" id="K6U-ZX-zG5"/>
+                                            <constraint firstItem="NzV-3S-6aV" firstAttribute="trailing" secondItem="bM9-Hk-5lF" secondAttribute="trailingMargin" id="R1c-hJ-cQw"/>
+                                            <constraint firstItem="IWq-bo-bEv" firstAttribute="centerX" secondItem="bM9-Hk-5lF" secondAttribute="centerX" id="eon-yb-h1Q"/>
+                                            <constraint firstItem="NzV-3S-6aV" firstAttribute="top" secondItem="bM9-Hk-5lF" secondAttribute="topMargin" id="kE6-vZ-HBX"/>
+                                            <constraint firstItem="NzV-3S-6aV" firstAttribute="bottom" secondItem="bM9-Hk-5lF" secondAttribute="bottomMargin" id="x1a-2R-Rlt"/>
+                                            <constraint firstItem="NzV-3S-6aV" firstAttribute="leading" secondItem="bM9-Hk-5lF" secondAttribute="leadingMargin" id="zUO-QA-x6M"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
