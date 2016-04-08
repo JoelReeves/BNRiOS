@@ -41,7 +41,7 @@ class PhotoStore {
                     try! mainQueueContext.obtainPermanentIDsForObjects(photos)
                 }
                 let objectIDs = photos.map{ $0.objectID }
-                let predicate = NSPredicate(format: "self IN %@", argumentArray: objectIDs)
+                let predicate = NSPredicate(format: "self IN %@", objectIDs)
                 let sortByDateTaken = NSSortDescriptor(key: "dateTaken", ascending: true)
                 
                 do {
