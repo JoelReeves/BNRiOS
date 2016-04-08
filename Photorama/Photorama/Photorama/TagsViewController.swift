@@ -44,11 +44,19 @@ class TagsViewController: UITableViewController {
         
         if let index = selectedIndexPaths.indexOf(indexPath) {
             selectedIndexPaths.removeAtIndex(index)
+            photo.removeTagObject(tag)
         } else {
             selectedIndexPaths.append(indexPath)
+            photo.addTagObject(tag)
         }
         
         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        do {
+            try store.coreDataStack.saveChanges()
+        } catch let error {
+            print("core data save failed: \(error)")
+        }
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
