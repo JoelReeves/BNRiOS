@@ -66,7 +66,7 @@ class PhotoStore {
             return .Failure(error!)
         }
         
-        return FlickrAPI.photosFromJSONData(jsonData, inContext: self.coreDataStack.mainQueueContext)
+        return FlickrAPI.photosFromJSONData(jsonData, inContext: self.coreDataStack.privateQueueContext)
     }
     
     func fetchImageForPhoto(photo: Photo, completion: (ImageResult) -> Void) {
