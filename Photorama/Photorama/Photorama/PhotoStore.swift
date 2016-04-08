@@ -10,6 +10,8 @@ import UIKit
 
 class PhotoStore {
     
+    let coreDataStack = CoreDataStack(modelName: "Photorama")
+    
     enum ImageResult {
         case Success(UIImage)
         case Failure(ErrorType)
