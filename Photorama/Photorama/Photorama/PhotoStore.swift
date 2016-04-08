@@ -32,7 +32,16 @@ class PhotoStore {
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
             
-            let result = self.processRecentPhotosRequest(data: data, error: error)
+            var result = self.processRecentPhotosRequest(data: data, error: error)
+            
+            if case let .Success(photos) = result {
+                do {
+                    try self.coreDataStack.saveChanges()
+                } catch let error {
+                    result = .Failure(error)
+                }
+            }
+            
             completion(result)
         }
         
