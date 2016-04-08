@@ -15,4 +15,12 @@ class TagsViewController: UITableViewController {
     var photo: Photo!
     
     var selectedIndexPaths = [NSIndexPath]()
+    
+    let tagsDataSource = TagDataSource()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = tagsDataSource
+    }
 }
