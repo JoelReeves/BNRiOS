@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PhotoStore {
     
@@ -94,5 +95,29 @@ class PhotoStore {
         }
         
         return .Success(image)
+    }
+    
+    func fetchMainQueuePhotos(predicate predicate: NSPredicate? = nil, sortDescriptors: [NSSortDescriptor]? = nil) throws -> [Photo] {
+        let fetchRequest = NSFetchRequest(entityName: "Photo")
+        fetchRequest.sortDescriptors = sortDescriptors
+        fetchRequest.predicate = predicate
+        
+        let mainQueueContext = self.coreDataStack.mainQueueContext
+        var mainQueuePhotos: [Photo]?
+        var fetchRequestError: ErrorType?
+        
+        mainQueueContext.performBlockAndWait() {
+            do {
+                mainQueuePhotos = try mainQueueContext.executeFetchRequest(fetchRequest) as? [Photo]
+            } catch let error {
+                fetchRequestError = error
+            }
+        }
+        
+        guard let photos = mainQueuePhotos else {
+            throw fetchRequestError!
+        }
+        
+        return photos
     }
 }
