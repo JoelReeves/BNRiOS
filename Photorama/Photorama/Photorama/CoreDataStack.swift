@@ -16,4 +16,9 @@ class CoreDataStack {
     required init(modelName: String) {
         managedObjectModelName = modelName
     }
+    
+    private lazy var managedObjectModel: NSManagedObjectModel = {
+        let modelURL = NSBundle.mainBundle().URLForResource(self.managedObjectModelName, withExtension: "momd")!
+        return NSManagedObjectModel(contentsOfURL: modelURL)!
+    }()
 }
