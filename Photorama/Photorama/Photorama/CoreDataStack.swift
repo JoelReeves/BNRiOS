@@ -56,6 +56,21 @@ class CoreDataStack {
     
     func saveChanges() throws {
         var error: ErrorType?
+        
+        privateQueueContext.performBlockAndWait { () -> Void in
+            if self.privateQueueContext.hasChanges {
+                do {
+                    try self.privateQueueContext.save()
+                } catch let saveError {
+                    error = saveError
+                }
+            }
+            
+            if let error = error {
+                throw error
+            }
+        }
+        
         mainQueueContext.performBlockAndWait() {
             if self.mainQueueContext.hasChanges {
                 do {
