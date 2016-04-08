@@ -22,6 +22,7 @@
 		ABE6C6801CB7E81000DC2DB6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C67E1CB7E81000DC2DB6 /* Photo.swift */; };
 		ABE6C6821CB7E9CE00DC2DB6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C6811CB7E9CE00DC2DB6 /* CoreDataStack.swift */; };
 		ABE6C6841CB7FBA100DC2DB6 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C6831CB7FBA100DC2DB6 /* ImageStore.swift */; };
+		ABE6C6861CB800A900DC2DB6 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C6851CB800A900DC2DB6 /* TagsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		ABE6C67E1CB7E81000DC2DB6 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		ABE6C6811CB7E9CE00DC2DB6 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		ABE6C6831CB7FBA100DC2DB6 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		ABE6C6851CB800A900DC2DB6 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				AB6DE8681CB41DCB0030EA03 /* PhotosViewController.swift */,
 				AB5FD7D71CB6B11900269FAF /* PhotoInfoViewController.swift */,
+				ABE6C6851CB800A900DC2DB6 /* TagsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				AB6DE8691CB41DCB0030EA03 /* PhotosViewController.swift in Sources */,
 				ABE6C6801CB7E81000DC2DB6 /* Photo.swift in Sources */,
 				ABCD17861CB545E400F9CF76 /* PhotoStore.swift in Sources */,
+				ABE6C6861CB800A900DC2DB6 /* TagsViewController.swift in Sources */,
 				ABE6C6821CB7E9CE00DC2DB6 /* CoreDataStack.swift in Sources */,
 				AB5FD7D61CB6A1AD00269FAF /* PhotoCollectionViewCell.swift in Sources */,
 				ABE6C67F1CB7E81000DC2DB6 /* Photo+CoreDataProperties.swift in Sources */,
