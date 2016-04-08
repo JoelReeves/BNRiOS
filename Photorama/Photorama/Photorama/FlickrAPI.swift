@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum Method: String {
     case RecentPhotos = "flickr.photos.getRecent"
@@ -95,7 +96,7 @@ struct FlickrAPI {
         }
     }
     
-    private static func photoFromJSONObject(json: [String: AnyObject]) -> Photo? {
+    private static func photoFromJSONObject(json: [String: AnyObject], inContext context: NSManagedObjectContext) -> Photo? {
         guard let
             photoID = json["id"] as? String,
             title = json["title"] as? String,
@@ -107,6 +108,16 @@ struct FlickrAPI {
                 return nil
         }
         
-        return Photo(title: title, photoID: photoID, remoteURL: url, dateTaken: dateTaken)
+        var photo: Photo!
+        context.performBlockAndWait() {
+            photo = NSEntityDescription.insertNewObjectForEntityForName("Photo", inManagedObjectContext: context) as! Photo
+            photo.title = title
+            photo.photoID = photoID
+            photo.remoteURL = url
+            photo.dateTaken = dateTaken
+        }
+        
+        return photo
+    
     }
 }
