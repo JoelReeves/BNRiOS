@@ -66,4 +66,12 @@ class TagsViewController: UITableViewController {
             cell.accessoryType = .None
         }
     }
+    
+    @IBAction func done(sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func addNewTag(sender: UIBarButtonItem) {
+        
+    }
 }
