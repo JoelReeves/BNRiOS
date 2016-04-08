@@ -92,15 +92,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QTk-rH-g5g">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="64" width="560" height="484"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AC5-lR-fZb">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Tags" id="c9r-lz-TCh"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QTk-rH-g5g" firstAttribute="leading" secondItem="ftm-bv-MwQ" secondAttribute="leadingMargin" id="IYa-9B-POl"/>
-                            <constraint firstItem="gN7-Oy-Dg6" firstAttribute="top" secondItem="QTk-rH-g5g" secondAttribute="bottom" id="RBR-ab-W0Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QTk-rH-g5g" secondAttribute="trailing" id="XAn-Uk-zzp"/>
-                            <constraint firstItem="QTk-rH-g5g" firstAttribute="top" secondItem="hy3-c9-6ar" secondAttribute="bottom" id="om6-pJ-20s"/>
+                            <constraint firstItem="QTk-rH-g5g" firstAttribute="centerX" secondItem="AC5-lR-fZb" secondAttribute="centerX" id="6k0-BK-jz6"/>
+                            <constraint firstAttribute="trailing" secondItem="AC5-lR-fZb" secondAttribute="trailing" id="PC0-e2-3ww"/>
+                            <constraint firstItem="QTk-rH-g5g" firstAttribute="leading" secondItem="ftm-bv-MwQ" secondAttribute="leadingMargin" id="PnB-5t-aRY"/>
+                            <constraint firstItem="QTk-rH-g5g" firstAttribute="top" secondItem="hy3-c9-6ar" secondAttribute="bottom" id="ccR-C3-rsz"/>
+                            <constraint firstItem="AC5-lR-fZb" firstAttribute="leading" secondItem="ftm-bv-MwQ" secondAttribute="leading" id="jAJ-PE-D77"/>
+                            <constraint firstItem="AC5-lR-fZb" firstAttribute="top" secondItem="QTk-rH-g5g" secondAttribute="bottom" constant="8" id="pZY-Sf-dEO"/>
+                            <constraint firstItem="AC5-lR-fZb" firstAttribute="bottom" secondItem="gN7-Oy-Dg6" secondAttribute="top" id="uJM-Pt-n9d"/>
                         </constraints>
                     </view>
                     <connections>
