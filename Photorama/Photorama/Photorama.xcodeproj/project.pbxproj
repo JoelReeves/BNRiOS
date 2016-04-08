@@ -21,6 +21,7 @@
 		ABE6C67F1CB7E81000DC2DB6 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C67D1CB7E81000DC2DB6 /* Photo+CoreDataProperties.swift */; };
 		ABE6C6801CB7E81000DC2DB6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C67E1CB7E81000DC2DB6 /* Photo.swift */; };
 		ABE6C6821CB7E9CE00DC2DB6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C6811CB7E9CE00DC2DB6 /* CoreDataStack.swift */; };
+		ABE6C6841CB7FBA100DC2DB6 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6C6831CB7FBA100DC2DB6 /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		ABE6C67D1CB7E81000DC2DB6 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABE6C67E1CB7E81000DC2DB6 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		ABE6C6811CB7E9CE00DC2DB6 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		ABE6C6831CB7FBA100DC2DB6 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				ABE6C67D1CB7E81000DC2DB6 /* Photo+CoreDataProperties.swift */,
 				ABE6C67E1CB7E81000DC2DB6 /* Photo.swift */,
 				ABE6C6811CB7E9CE00DC2DB6 /* CoreDataStack.swift */,
+				ABE6C6831CB7FBA100DC2DB6 /* ImageStore.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				ABE6C67F1CB7E81000DC2DB6 /* Photo+CoreDataProperties.swift in Sources */,
 				AB5FD7D81CB6B11900269FAF /* PhotoInfoViewController.swift in Sources */,
 				AB6DE8541CB41D4B0030EA03 /* AppDelegate.swift in Sources */,
+				ABE6C6841CB7FBA100DC2DB6 /* ImageStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
