@@ -36,8 +36,19 @@ class PhotoStore {
             var result = self.processRecentPhotosRequest(data: data, error: error)
             
             if case let .Success(photos) = result {
+                let mainQueueContext = self.coreDataStack.mainQueueContext
+                mainQueueContext.performBlockAndWait() {
+                    try! mainQueueContext.obtainPermanentIDsForObjects(photos)
+                }
+                let objectIDs = photos.map{ $0.objectID }
+                let predicate = NSPredicate(format: "self IN %@", argumentArray: objectIDs)
+                let sortByDateTaken = NSSortDescriptor(key: "dateTaken", ascending: true)
+                
                 do {
                     try self.coreDataStack.saveChanges()
+                    
+                    let mainQueuePhotos = try self.fetchMainQueuePhotos(predicate: predicate, sortDescriptors: [sortByDateTaken])
+                    result = .Success(mainQueuePhotos)
                 } catch let error {
                     result = .Failure(error)
                 }
