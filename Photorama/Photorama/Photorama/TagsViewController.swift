@@ -68,7 +68,7 @@ class TagsViewController: UITableViewController {
     }
     
     @IBAction func done(sender: UIBarButtonItem) {
-        
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func addNewTag(sender: UIBarButtonItem) {
