@@ -22,5 +22,12 @@ class TagsViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.dataSource = tagsDataSource
+        
+        updateTags()
+    }
+    
+    func updateTags() {
+        let tags = try! store.fetchMainQueueTags(predicate: nil, sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)])
+        tagsDataSource.tags = tags
     }
 }
