@@ -103,4 +103,5 @@ class TagsViewController: UITableViewController {
         alertController.addAction(cancelAction)
         
         presentViewController(alertController, animated: true, completion: nil)
+    }
 }
