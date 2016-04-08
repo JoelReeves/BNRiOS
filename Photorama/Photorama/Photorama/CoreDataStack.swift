@@ -65,10 +65,10 @@ class CoreDataStack {
                     error = saveError
                 }
             }
-            
-            if let error = error {
-                throw error
-            }
+        }
+        
+        if let error = error {
+            throw error
         }
         
         mainQueueContext.performBlockAndWait() {
